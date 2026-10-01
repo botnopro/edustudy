@@ -1,0 +1,12 @@
+target/
+.mvn/
+mvnw
+mvnw.cmd
+.env
+*.env
+.git/
+.idea/
+*.iml
+*.log
+hs_err_pid*.log
+replay_pid*.log
