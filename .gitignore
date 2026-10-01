@@ -13,6 +13,10 @@
 .env.*.local
 !.env.example
 !*.env.example
+# .env.production holds only the public backend URL (VITE_ vars are bundled
+# into the client anyway), and Vercel needs it at build time — keep it tracked.
+!.env.production
+!frontend/.env.production
 application-secret.yml
 application-secret.yaml
 application-local.yml
