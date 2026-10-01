@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: false
+
+payment:
+  bank-bin: "970422"
+  bank-account: "0988888888"
+  bank-name: "MBBank"
+  bank-account-name: "CONG TY GIAO DUC edu STUDY"
+  sepay:
+    webhook-secret: "test-sepay-secret-key-123456"
+
+edu:
+  jwt:
+    issuer: edu-Study-Authority
+    secret: TestSecretKeyForJwtTokenSigningMustBeAtLeast256BitsLong2026SecureKey!
+    access-expiration-minutes: 1440

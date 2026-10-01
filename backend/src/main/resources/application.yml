@@ -1,0 +1,59 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: edu-study-backend
+  profiles:
+    active: ${APP_PROFILE:local}
+  datasource:
+    url: ${DATABASE_URL:${DB_URL:jdbc:postgresql://aws-0-ap-south-1.pooler.supabase.com:6543/postgres?sslmode=require&prepareThreshold=0}}
+    username: ${DATABASE_USERNAME:${DB_USERNAME:postgres.etsdctmwyypifosqahtx}}
+    password: ${DATABASE_PASSWORD:${DB_PASSWORD:}}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      connection-timeout: 20000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 30MB
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    operations-sorter: method
+
+edu:
+  jwt:
+    issuer: EduStudy-Authority
+    # Dev-only fallback so the app boots locally; ALWAYS override via JWT_SECRET env var in production.
+    secret: ${JWT_SECRET:dev-only-insecure-jwt-secret-change-me-in-production-min-256-bits-0123456789}
+    access-expiration-minutes: 1440
+  security:
+    allowed-origins: ${ALLOWED_ORIGINS:http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000}
+
+payment:
+  bank-bin: ${PAYMENT_BANK_BIN:970422}
+  bank-account: ${PAYMENT_BANK_ACCOUNT:0988888888}
+  bank-name: ${PAYMENT_BANK_NAME:MBBank}
+  bank-account-name: ${PAYMENT_BANK_ACCOUNT_NAME:CONG TY CO PHAN CONG NGHE GIAO DUC EDUSTUDY}
+  sepay:
+    webhook-secret: ${SEPAY_WEBHOOK_SECRET:}
+

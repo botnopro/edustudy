@@ -1,0 +1,90 @@
+# ===========================================================================
+#  EduStudy  —  .gitignore
+#  Safe to push to GitHub and deploy on Render (backend) + Vercel (frontend).
+#  Build inputs that the platforms need (pom.xml, mvnw, .mvn/wrapper,
+#  package.json, package-lock.json, source) are intentionally NOT ignored.
+# ===========================================================================
+
+# --- Secrets & environment variables (NEVER commit) ------------------------
+.env
+.env.*
+*.env
+*.env.local
+.env.*.local
+!.env.example
+!*.env.example
+application-secret.yml
+application-secret.yaml
+application-local.yml
+application-local.yaml
+*.pem
+*.key
+*.p12
+*.keystore
+secrets.*
+
+# --- IDE & editor ----------------------------------------------------------
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.sublime-*
+.project
+.classpath
+.settings/
+
+# --- OS junk ---------------------------------------------------------------
+.DS_Store
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ===========================================================================
+#  Backend  —  Java / Spring Boot / Maven  (deploys on Render)
+# ===========================================================================
+backend/target/
+target/
+*.class
+*.jar
+*.war
+!backend/.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.jar.lck
+*.log
+
+# JVM crash dumps
+hs_err_pid*.log
+replay_pid*.log
+*.hprof
+
+# ===========================================================================
+#  Frontend  —  Vite / React / Node  (deploys on Vercel)
+# ===========================================================================
+frontend/node_modules/
+node_modules/
+frontend/dist/
+dist/
+build/
+frontend/.vite/
+.vite/
+*.tsbuildinfo
+frontend/tsconfig.tsbuildinfo
+
+# npm / yarn / pnpm debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# --- Deployment platform caches --------------------------------------------
+.vercel/
+.netlify/
+.render/
+
+# --- Test / coverage output ------------------------------------------------
+coverage/
+.nyc_output/
+
+.claude

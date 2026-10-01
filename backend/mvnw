@@ -1,0 +1,8 @@
+#!/bin/sh
+# Maven wrapper script for Linux / Unix / Container
+if command -v mvn >/dev/null 2>&1; then
+    exec mvn "$@"
+else
+    echo "Maven not found in PATH, executing via container or installed maven"
+    exit 1
+fi
