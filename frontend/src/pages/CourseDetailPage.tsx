@@ -257,7 +257,7 @@ export const CourseDetailPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-50 pb-20">
       
-      {/* 1. TOP HERO BANNER (Styled like QANDA Study: Dark overlay banner with book illustrations) */}
+      {/* 1. TOP HERO BANNER (Styled like Edu Study: Dark overlay banner with book illustrations) */}
       <div className="relative bg-gradient-to-r from-slate-950 via-slate-900 to-stone-900 text-white overflow-hidden py-10 sm:py-14 border-b border-slate-800">
         
         {/* Subtle patterned background decoration */}
@@ -621,7 +621,7 @@ export const CourseDetailPage: React.FC = () => {
 
           </div>
 
-          {/* RIGHT COLUMN: STICKY PURCHASE CARD (MATCHING QANDA STUDY PHOTO 2 EXACTLY) */}
+          {/* RIGHT COLUMN: STICKY PURCHASE CARD (MATCHING Edu STUDY PHOTO 2 EXACTLY) */}
           <div className="lg:sticky lg:top-32 space-y-4">
             
             <div className="bg-white rounded-3xl border border-slate-200/90 p-5 sm:p-6 shadow-xl space-y-5">

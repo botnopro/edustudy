@@ -50,8 +50,8 @@ export const AuthModal: React.FC = () => {
     try {
       const creds =
         role === 'admin'
-          ? { email: 'admin@qandastudy.com', password: 'admin123' }
-          : { email: 'hocsinh@qandastudy.com', password: 'student123' };
+          ? { email: 'admin@Edustudy.com', password: 'admin123' }
+          : { email: 'hocsinh@Edustudy.com', password: 'student123' };
       const res = await authApi.login(creds);
       login(res.accessToken, res.user);
       closeAuthModal();

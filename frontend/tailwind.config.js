@@ -34,8 +34,8 @@ export default {
         'xs': '0 1px 2px 0 rgba(15, 23, 42, 0.06)',
         'soft': '0 2px 8px -2px rgba(15, 23, 42, 0.08), 0 4px 16px -4px rgba(15, 23, 42, 0.06)',
         'soft-lg': '0 8px 24px -6px rgba(15, 23, 42, 0.12), 0 16px 48px -12px rgba(15, 23, 42, 0.10)',
-        'qanda': '0 4px 20px -2px rgba(239, 68, 1, 0.15)',
-        'qanda-lg': '0 10px 30px -4px rgba(239, 68, 1, 0.25)',
+        'Edu': '0 4px 20px -2px rgba(239, 68, 1, 0.15)',
+        'Edu-lg': '0 10px 30px -4px rgba(239, 68, 1, 0.25)',
       },
       // Backfill fractional scales used across the app (scale-101/102)
       scale: {

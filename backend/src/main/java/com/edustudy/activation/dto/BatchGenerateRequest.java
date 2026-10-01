@@ -16,7 +16,7 @@ public class BatchGenerateRequest {
     @Max(value = 100, message = "Số lượng mã tối đa là 100 mã một lần")
     private Integer quantity = 5;
 
-    private String prefix; // e.g. "QANDA12-"
+    private String prefix; // e.g. "Edu12-"
     private Integer maxUsesPerCode = 1;
     private Instant expiresAt;
     private String notes;

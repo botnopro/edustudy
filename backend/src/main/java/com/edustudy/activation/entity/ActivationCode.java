@@ -18,7 +18,7 @@ import java.time.Instant;
 public class ActivationCode extends BaseEntity {
 
     @Column(nullable = false, unique = true, length = 50)
-    private String code; // e.g. "QANDA12-TOAN", "VIP2026-PHYSICS"
+    private String code; // e.g. "Edu12-TOAN", "VIP2026-PHYSICS"
 
     @Column(name = "course_id", nullable = false)
     private Long courseId;

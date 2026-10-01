@@ -48,7 +48,7 @@ public class OrderDto {
                     "https://img.vietqr.io/image/970422-0988888888-compact2.png?amount=%d&addInfo=%s&accountName=%s",
                     amtLong,
                     order.getOrderCode() != null ? order.getOrderCode() : "ORDER",
-                    "CONG%20TY%20GIAO%20DUC%20QANDA%20STUDY"
+                    "CONG%20TY%20GIAO%20DUC%20Edu%20STUDY"
             );
         }
 
